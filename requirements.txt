@@ -1,0 +1,11 @@
+# Project dependencies
+# Add your Python package requirements here
+pandas
+numpy
+faker
+sqlalchemy
+psycopg2-binary
+fastapi
+uvicorn
+streamlit
+plotly
