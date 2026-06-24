@@ -5,6 +5,8 @@ numpy
 faker
 sqlalchemy
 psycopg2-binary
+python-dotenv
+pyarrow
 fastapi
 uvicorn
 streamlit
