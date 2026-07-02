@@ -59,16 +59,17 @@ def generate_transactions(n=10000):
         )
 
         records.append({
-            "txn_id":        txn_id,
-            "timestamp":     timestamp,
-            "sender_bank":   random.choice(BANKS),
-            "receiver_bank": random.choice(BANKS),
-            "upi_app":       random.choice(UPI_APPS),
-            "amount":        amount,
-            "status":        random.choice(STATUSES),
-            "merchant":      fake.company(),
-            "city":          fake.city(),
-            "category":      random.choice(CATEGORIES)
+            "txn_id":         txn_id,
+            "timestamp":      timestamp,
+            "sender_bank":    random.choice(BANKS),
+            "sender_account": f"ACC{random.randint(10000, 99999)}",
+            "receiver_bank":  random.choice(BANKS),
+            "upi_app":        random.choice(UPI_APPS),
+            "amount":         amount,
+            "status":         random.choice(STATUSES),
+            "merchant":       fake.company(),
+            "city":           fake.city(),
+            "category":       random.choice(CATEGORIES)
         })
 
     df = pd.DataFrame(records)
@@ -86,7 +87,6 @@ def save_data(df):
     date_str = datetime.now().strftime("%Y%m%d")
     filepath = f"data/raw/transactions_{date_str}.csv"
 
-    # Make sure folder exists
     os.makedirs("data/raw", exist_ok=True)
 
     df.to_csv(filepath, index=False)

@@ -41,7 +41,7 @@ def load(df, table_name="transactions"):
         df.to_sql(
             table_name,
             engine,
-            if_exists="append",   # add rows — do not delete existing data
+            if_exists="replace",   # add rows — do not delete existing data
             index=False            # do not save DataFrame index as a column
         )
 
