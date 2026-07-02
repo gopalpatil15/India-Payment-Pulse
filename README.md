@@ -1,6 +1,4 @@
-Here is the complete README.md — copy this exactly:
 
-```markdown
 # India Payment Pulse 🇮🇳
 
 An end-to-end ETL data pipeline simulating India's UPI payment ecosystem —
@@ -97,8 +95,8 @@ Raw CSV (10,000 UPI transactions)
 | HIGH_VALUE anomalies | 91 (1.0%) |
 | VELOCITY_ANOMALY | 384 (4.2%) |
 | Clean transactions | 8,571 (94.7%) |
-| Loaded to PostgreSQL | 9,046 rows ✅ |
-| Parquet backup | 467.8 KB ✅ |
+| Loaded to PostgreSQL | 9,046 rows |
+| Parquet backup | 467.8 KB |
 | Total run time | 16.98 seconds |
 
 ---
@@ -192,8 +190,5 @@ generate_data >> extract >> transform >> detect_anomalies >> load_to_postgresql
 
 **Gopal Patil**
 [GitHub](https://github.com/gopalpatil15) ·
-[LinkedIn](https://linkedin.com/in/gopalpatil) ·
 bhamaregopal2003@gmail.com
 ```
-
----
